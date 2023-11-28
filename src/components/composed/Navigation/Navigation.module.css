@@ -54,12 +54,12 @@
 
 .changeLanguageBtn {
   width: 5rem;
+  height: 100%;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 .flag {
-  width: 100%;
   padding: 0.5rem;
   filter: brightness(0.8);
   border-radius: 7px;

@@ -1,7 +1,7 @@
 import classes from "./Hero.module.css";
 import video from "../../assets/красно голубой.mp4";
 //////
-import Navigation from "../composed/Navigation";
+import Navigation from "../composed/Navigation/Navigation";
 /////
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -11,21 +11,6 @@ import { useLayoutEffect, useRef } from "react";
 import { CSSPlugin } from "gsap/CSSPlugin";
 gsap.registerPlugin(CSSPlugin);
 /////
-
-/* Для создания библиотеки иконок
-import {
-  IconLookup,
-  IconDefinition,
-  findIconDefinition,
-} from "@fortawesome/fontawesome-svg-core";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-library.add(fas);
-
-const coffeeLookup: IconLookup = { prefix: "fas", iconName: "coffee" };
-const coffeeIconDefinition: IconDefinition = findIconDefinition(coffeeLookup);
-*/
 
 const HeroSection = () => {
   const iconRef = useRef<SVGSVGElement>(null);
