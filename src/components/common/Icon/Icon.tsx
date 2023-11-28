@@ -18,6 +18,16 @@ export enum IconTechNames {
   css = "css-3",
   figma = "figma",
   firebase = "firebase",
+  git = "git-icon",
+  html = "html-5",
+  js = "javascript",
+  jest = "jest",
+  react = "react",
+  reactRt = "react-router",
+  redux = "redux",
+  sass = "sass",
+  ts = "typescript",
+  webpack = "webpack",
 }
 
 export type IconProps = {
@@ -25,6 +35,7 @@ export type IconProps = {
   color?: string;
   size?: IconSize;
   className?: string;
+  ref?: SVGSVGElement;
 };
 
 export function Icon({
@@ -32,6 +43,7 @@ export function Icon({
   color = "currentColor",
   size = IconSize.m,
   className,
+  ref,
 }: IconProps) {
   return (
     <svg

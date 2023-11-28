@@ -14,20 +14,34 @@ const TechStack = () => {
       <div className={classes.container}>
         <div className={classes.innerContainer}>
           <h2 className={classes.heading}>Стэк технологий</h2>
-
-          <ul className={classes.list}>
-            {techIconNames.map((name) => {
-              return (
-                <li key={name} className={classes.listItem}>
-                  <Icon
-                    name={IconTechNames[name]}
-                    className={classes.flag}
-                    size={IconSize.custom}
-                  />
-                </li>
-              );
-            })}
-          </ul>
+          <div className={classes.wrapper}>
+            <ul className={classes.list}>
+              {techIconNames.map((name) => {
+                return (
+                  <li key={name} className={classes.listItem}>
+                    <Icon
+                      name={IconTechNames[name]}
+                      className="techIcon"
+                      size={IconSize.custom}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+            <ul className={classes.list}>
+              {techIconNames.map((name) => {
+                return (
+                  <li key={name} className={classes.listItem}>
+                    <Icon
+                      name={IconTechNames[name]}
+                      className="techIcon"
+                      size={IconSize.custom}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </>
