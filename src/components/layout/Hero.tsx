@@ -16,7 +16,6 @@ const HeroSection = () => {
   const iconRef = useRef<SVGSVGElement>(null);
 
   useLayoutEffect(() => {
-    console.log(iconRef);
     gsap.to(iconRef.current, {
       duration: 0.5,
       y: -7,

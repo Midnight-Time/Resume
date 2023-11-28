@@ -14,8 +14,14 @@ export enum IconNames {
   germ = "germany-flag",
 }
 
+export enum IconTechNames {
+  css = "css-3",
+  figma = "figma",
+  firebase = "firebase",
+}
+
 export type IconProps = {
-  name?: IconNames;
+  name?: IconNames | IconTechNames;
   color?: string;
   size?: IconSize;
   className?: string;
