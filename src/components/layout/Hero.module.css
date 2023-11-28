@@ -19,7 +19,7 @@
 .textContainer {
   width: 100%;
   max-width: max-content;
-  padding: 3rem 6rem;
+  padding: 3rem 9rem;
   margin: 8rem auto;
   color: var(--color-text-light);
   display: flex;
@@ -40,4 +40,5 @@
 }
 .icon {
   color: var(--color-accent-blue);
+  margin-top: 2px;
 }
