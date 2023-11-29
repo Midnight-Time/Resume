@@ -55,9 +55,8 @@
   background: linear-gradient(to right, transparent, var(--color-primary-dark));
 }
 
-.wrapper:hover .list {
-  animation-play-state: paused;
-}
+/* .wrapper:hover .list {
+} */
 
 .list {
   display: inline-block;

@@ -1,7 +1,7 @@
 import classes from "./Hero.module.css";
-import video from "../../assets/красно голубой.mp4";
 //////
 import Navigation from "../composed/Navigation/Navigation";
+import Video from "../common/Video/Video";
 /////
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -26,11 +26,7 @@ const HeroSection = () => {
 
   return (
     <div className={classes.hero}>
-      <div className={classes.bgVideo}>
-        <video autoPlay muted loop className={classes.video}>
-          <source src={video} type="video/mp4" />
-        </video>
-      </div>
+      <Video />
       <Navigation />
       <div className={classes.textContainer}>
         <h1>

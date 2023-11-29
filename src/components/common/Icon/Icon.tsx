@@ -35,7 +35,6 @@ export type IconProps = {
   color?: string;
   size?: IconSize;
   className?: string;
-  ref?: SVGSVGElement;
 };
 
 export function Icon({
@@ -43,7 +42,6 @@ export function Icon({
   color = "currentColor",
   size = IconSize.m,
   className,
-  ref,
 }: IconProps) {
   return (
     <svg

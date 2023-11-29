@@ -6,3 +6,4 @@ declare module "*.mp4" {
 }
 declare module "gsap/gsap-core";
 declare module "gsap/CSSPlugin";
+declare module "gsap/ScrollTrigger";
