@@ -48,7 +48,9 @@
   background-color: rgba(32, 191, 254, 0.1);
 }
 .tagsContainer {
-  margin-top: -1rem;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: -0.5rem;
   margin-bottom: 0.5rem;
 }
 .btn__tag {
@@ -80,6 +82,11 @@
 .btn__github:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
+
 .arrowIcon {
-  color: var(--color-text-dark);
+  transition: all 0.3s;
+}
+
+.btn__github:hover .arrowIcon {
+  transform: translateX(5px);
 }
