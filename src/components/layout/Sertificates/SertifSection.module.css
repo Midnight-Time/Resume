@@ -1,0 +1,90 @@
+.container {
+  background-color: var(--color-background);
+  padding: 10rem 20rem;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+}
+.container h2 {
+  text-align: start;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.headText {
+  width: 50%;
+  margin-bottom: 5rem;
+}
+.innerContainer {
+  display: flex;
+  gap: 10rem;
+  margin: 0 auto;
+  width: 160rem;
+}
+.card {
+  width: 30rem;
+  overflow: hidden;
+  border: 1px solid #b8337c;
+  box-shadow: 0 0.5rem 1rem 0 #20bffead;
+  border-radius: 7px;
+}
+.cardImage {
+  width: 100%;
+}
+.cardImage img {
+  width: 100%;
+}
+.cardText {
+  background-color: #b8337c;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardHeading {
+  color: var(--color-text-light);
+  font-size: 1.4rem;
+}
+.cardText span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cardText p {
+  font-size: 1.2rem;
+}
+.cardText button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  background-color: transparent;
+  border: 1px solid var(--color-text-dark);
+}
+.cardText button:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: min-content;
+  margin: 5rem auto 0;
+}
+.btnContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--color-text-light);
+  transition: all 0.3s;
+}
+.btnContainer button:hover {
+  background-color: var(--color-accent-blue);
+  color: var(--color-text-light);
+}

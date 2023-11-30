@@ -55,9 +55,6 @@
   background: linear-gradient(to right, transparent, var(--color-primary-dark));
 }
 
-/* .wrapper:hover .list {
-} */
-
 .list {
   display: inline-block;
   animation: 35s move infinite linear;

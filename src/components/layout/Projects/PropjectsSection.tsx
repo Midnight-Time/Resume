@@ -52,17 +52,13 @@ const ProjectsSection = () => {
       });
 
     // inner container
-    gsap.set(".innerHeading_projSection", {
-      opacity: 0,
-      x: 200,
-    });
     gsap.set(".text_projSection", {
       opacity: 0,
       x: 200,
     });
     gsap.set(".tags_projSection", {
       opacity: 0,
-      y: 50,
+      x: 50,
     });
 
     gsap
@@ -74,21 +70,15 @@ const ProjectsSection = () => {
           ease: "power4",
         },
       })
-      .to(".innerHeading_projSection", {
-        duration: 0.5,
-        opacity: 1,
-        x: 0,
-      })
       .to(".text_projSection", {
-        duration: 0.7,
+        duration: 1,
         opacity: 1,
         x: 0,
       })
       .to(".tags_projSection", {
-        duration: 2,
+        duration: 1,
         opacity: 1,
-        ease: "elastic.out(1.75,0.75)",
-        y: 0,
+        x: 0,
       });
   });
   return (
@@ -97,7 +87,7 @@ const ProjectsSection = () => {
       <div className={classes.innerContainer}>
         <div className={`image_projSection ${classes.image}`}></div>
         <div className={classes.descContainer}>
-          <div className="innerHeading_projSection">
+          <div className="text_projSection">
             <h3>вэб-приложение</h3>
             <span>Онлайн редактор кода</span>
           </div>
