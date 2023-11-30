@@ -1,6 +1,7 @@
-import HeroSection from "../components/layout/Hero";
-import TechStack from "../components/composed/TechStack/TechStack";
-import SkillsSection from "../components/composed/Skills/SkillsSection";
+import HeroSection from "../components/layout/HeroSection/Hero";
+import TechStack from "../components/layout/TechStack/TechStack";
+import SkillsSection from "../components/layout/Skills/SkillsSection";
+import ProjectsSection from "../components/layout/Projects/PropjectsSection";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <HeroSection />
       <TechStack />
       <SkillsSection />
+      <ProjectsSection />
     </>
   );
 };

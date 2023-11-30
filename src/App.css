@@ -21,3 +21,8 @@ h2 {
 p {
   font-size: 1.6rem;
 }
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

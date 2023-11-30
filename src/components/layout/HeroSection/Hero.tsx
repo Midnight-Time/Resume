@@ -1,7 +1,7 @@
 import classes from "./Hero.module.css";
 //////
-import Navigation from "../composed/Navigation/Navigation";
-import Video from "../common/Video/Video";
+import Navigation from "../../composed/Navigation/Navigation";
+import Video from "../../common/Video/Video";
 /////
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
