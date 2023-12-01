@@ -1,0 +1,43 @@
+.card {
+  width: 30rem;
+  overflow: hidden;
+  border: 1px solid #b8337c;
+  box-shadow: 0 0.5rem 1rem 0 #20bffead;
+  border-radius: 7px;
+}
+.cardImage {
+  width: 100%;
+}
+.cardImage img {
+  width: 100%;
+}
+.cardText {
+  background-color: #b8337c;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardHeading {
+  color: var(--color-text-light);
+  font-size: 1.4rem;
+}
+.cardText span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cardText p {
+  font-size: 1.2rem;
+}
+.cardText button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  background-color: transparent;
+  border: 1px solid var(--color-text-dark);
+}
+.cardText button:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
