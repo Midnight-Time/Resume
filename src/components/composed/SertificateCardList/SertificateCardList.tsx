@@ -16,48 +16,30 @@ interface SertifCardProps {
 
 const SertificateCardList: React.FC<SertifCardProps> = (props) => {
   useLayoutEffect(() => {
-    // gsap.set(".card", {
-    //   opacity: 0,
-    //   x: -60,
-    // });
-    // gsap
-    //   .timeline({
-    //     scrollTrigger: {
-    //       trigger: ".card",
-    //       start: "top 80%",
-    //       end: "bottom center",
-    //     },
-    //   })
-    //   .to(".card", {
-    //     duration: 0.4,
-    //     opacity: 1,
-    //     x: 0,
-    //   });
+    gsap.to(".sertificate", {
+      x: 0,
+      duration: 1,
+      opacity: 1,
+      // ease: "none",
+      ease: "power4.out",
+      // stagger: 0.2,
+    });
   });
-  const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-  };
 
   return (
     <>
       {props.cards.map((card) => (
-        <div className={`card ${card.id} ${classes.card}`} key={card.id}>
-          <div className={classes.cardImage}>
-            <img src={card.sourse} alt={card.courseName} />
-          </div>
-          <div className={classes.cardText}>
-            <div>
-              <h3 className={classes.cardHeading}>{card.courseName}</h3>
-              <span>{card.issuedBy}</span>
-            </div>
-            <p>{card.courseDesc}</p>
-            <button>Открыть</button>
-            <button className="prev" onClick={clickHandler}>
-              Prev
-            </button>
-            <button className="next">Next</button>
-          </div>
-        </div>
+        <a
+          href="#g"
+          id={card.id}
+          className={`${classes[card.id]} ${classes.card} sertificate  ${
+            classes.sertificate
+          }`}
+          key={card.id}
+        >
+          <span className={classes.learnMore}>Унать больше</span>
+          <span className={classes.courseName}>{card.courseName}</span>
+        </a>
       ))}
     </>
   );

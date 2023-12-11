@@ -1,47 +1,19 @@
 .container {
   background-color: var(--color-background);
-  padding: 10rem 20rem;
-  position: relative;
+  padding: 10rem 5rem;
   z-index: 20;
-  overflow: hidden;
 }
-.container h2 {
+.heading {
   text-align: start;
   font-weight: 700;
   letter-spacing: 3px;
-  margin-bottom: 2rem;
-}
-.headText {
-  width: 60%;
-  margin-bottom: 5rem;
-}
-.innerContainer {
-  display: flex;
-  gap: 10rem;
-  margin: 0 auto;
-  width: 160rem;
+  margin-bottom: 8rem;
+  width: fit-content;
+  border-bottom: 2px solid var(--color-primary-light);
 }
 
-.btnContainer {
+.innerContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  width: min-content;
-  margin: 5rem auto 0;
-}
-.btnContainer button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  padding: 1rem;
-  border-radius: 4px;
-  background-color: var(--color-text-light);
-  transition: all 0.3s;
-}
-.btnContainer button:hover {
-  background-color: var(--color-accent-blue);
-  color: var(--color-text-light);
+  flex-direction: column;
+  gap: 0.5rem;
 }

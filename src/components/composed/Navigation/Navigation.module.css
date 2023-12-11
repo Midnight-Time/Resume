@@ -14,17 +14,13 @@
 
 .logo {
   width: 5rem;
-  /* transition: all 0.5s; */
 }
-/* .logo:hover {
-  box-shadow: 0 0 0.5rem 0 var(--color-accent-blue),
-    inset 0 0 0.1rem 0.1rem var(--color-accent-blue);
-} */
 
 .navList {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
+  text-transform: uppercase;
 }
 .link {
   color: var(--color-text-light);

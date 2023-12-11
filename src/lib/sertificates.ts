@@ -14,7 +14,7 @@ const allSertificates = [
   },
   {
     id: "s2",
-    courseName: "Understanding Typescript",
+    courseName: "Typescript",
     issuedBy: "Udemy",
     courseDesc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptate ipsam deleniti excepturi, corporis.",

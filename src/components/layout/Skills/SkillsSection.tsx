@@ -8,111 +8,13 @@ import {
   faPalette,
   faHandshakeAngle,
 } from "@fortawesome/free-solid-svg-icons";
-/////
+////
 import { gsap } from "gsap/gsap-core";
-import { useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 /////
 
 const SkillsSection = () => {
-  useLayoutEffect(() => {
-    gsap.set(".h2_skillsSection", {
-      opacity: 0,
-      y: -60,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".h2_skillsSection",
-          start: "top 80%",
-          end: "bottom center",
-        },
-      })
-      .to(".h2_skillsSection", {
-        duration: 0.4,
-        opacity: 1,
-        y: 0,
-      });
-
-    gsap.set(".card_skillsSection_1", {
-      opacity: 0,
-      y: -100,
-    });
-    gsap.set(".card_skillsSection_2", {
-      opacity: 0,
-      y: -200,
-    });
-    gsap.set(".card_skillsSection_3", {
-      opacity: 0,
-      y: -300,
-    });
-    gsap.set(".card_skillsSection_4", {
-      opacity: 0,
-      y: -400,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".card_skillsSection",
-          start: "top 90%",
-          end: "bottom center",
-          ease: "power4",
-        },
-      })
-      .to(".card_skillsSection", {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-      });
-
-    gsap.set(".icon_skillSection", {
-      opacity: 0,
-      x: -50,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".card_skillsSection",
-          start: "top 90%",
-          end: "bottom center",
-          ease: "power4",
-        },
-      })
-      .to(".icon_skillSection", {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-      });
-
-    gsap.set(".arrow_skillsSection", {
-      opacity: 0,
-      x: -100,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".card_skillsSection",
-          start: "top 90%",
-          end: "bottom center",
-          ease: "power4",
-        },
-      })
-      .to(".arrow_skillsSection", {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-      })
-      .set(".arrow_skillsSection", {
-        x: 0,
-      })
-      .to(".arrow_skillsSection", {
-        duration: 0.5,
-        x: -7,
-        repeat: -1,
-        yoyo: true,
-      });
-  });
   return (
     <div className={classes.container}>
       <h2 className={`h2_skillsSection ${classes.heading}`}>Личные качества</h2>

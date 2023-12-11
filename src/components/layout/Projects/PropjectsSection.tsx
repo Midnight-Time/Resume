@@ -3,84 +3,10 @@ import classes from "./ProjectsSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 /////
-import { gsap } from "gsap/gsap-core";
-import { useLayoutEffect } from "react";
+// import { gsap } from "gsap/gsap-core";
+// import { useLayoutEffect } from "react";
 
 const ProjectsSection = () => {
-  useLayoutEffect(() => {
-    // heading
-    gsap.set(".h2_projSection", {
-      opacity: 0,
-      y: -60,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".h2_projSection",
-          start: "top 80%",
-          end: "bottom center",
-        },
-      })
-      .to(".h2_projSection", {
-        duration: 0.4,
-        opacity: 1,
-        y: 0,
-      });
-
-    // image
-    gsap.set(".image_projSection", {
-      opacity: 0,
-    });
-    gsap.set(".btn_github", {
-      opacity: 0,
-    });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".h2_projSection",
-          start: "top 80%",
-          end: "bottom center",
-        },
-      })
-      .to(".image_projSection", {
-        duration: 1,
-        opacity: 1,
-      })
-      .to(".btn_github", {
-        duration: 0.3,
-        opacity: 1,
-      });
-
-    // inner container
-    gsap.set(".text_projSection", {
-      opacity: 0,
-      x: 200,
-    });
-    gsap.set(".tags_projSection", {
-      opacity: 0,
-      x: 50,
-    });
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".h2_projSection",
-          start: "top 80%",
-          end: "bottom center",
-          ease: "power4",
-        },
-      })
-      .to(".text_projSection", {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-      })
-      .to(".tags_projSection", {
-        duration: 1,
-        opacity: 1,
-        x: 0,
-      });
-  });
   return (
     <div className={classes.container}>
       <h2 className="h2_projSection">Проекты</h2>
