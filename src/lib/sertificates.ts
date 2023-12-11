@@ -1,8 +1,3 @@
-import sertificateUI from "../assets/UI-UX-sertificate.jpg";
-import sertificateTS from "../assets/Typescript-sertificate.jpg";
-import sertificateJS from "../assets/Advanced-JS-sertificate.jpg";
-import sertificateSass from "../assets/Sass-sertificate.jpg";
-
 const allSertificates = [
   {
     id: "s1",
@@ -10,7 +5,8 @@ const allSertificates = [
     issuedBy: "Udemy",
     courseDesc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptate ipsam deleniti excepturi, corporis.",
-    sourse: sertificateUI,
+    sourse:
+      "https://www.udemy.com/certificate/UC-21708fca-20da-48b0-80d2-9ce631c66f84/",
   },
   {
     id: "s2",
@@ -18,7 +14,8 @@ const allSertificates = [
     issuedBy: "Udemy",
     courseDesc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptate ipsam deleniti excepturi, corporis.",
-    sourse: sertificateTS,
+    sourse:
+      "https://www.udemy.com/certificate/UC-a4c9a280-a48f-4790-8b8e-36e88210f2a9/",
   },
   {
     id: "s3",
@@ -26,7 +23,8 @@ const allSertificates = [
     issuedBy: "Udemy",
     courseDesc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptate ipsam deleniti excepturi, corporis.",
-    sourse: sertificateSass,
+    sourse:
+      "https://www.udemy.com/certificate/UC-f85ff497-6626-4172-a68a-387c898e5b66/",
   },
   {
     id: "s4",
@@ -34,7 +32,8 @@ const allSertificates = [
     issuedBy: "Udemy",
     courseDesc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptate ipsam deleniti excepturi, corporis.",
-    sourse: sertificateJS,
+    sourse:
+      "https://www.udemy.com/certificate/UC-5dd41d08-b750-4eb9-899a-9a5acbad5273/",
   },
 ];
 

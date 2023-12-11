@@ -1,5 +1,6 @@
 .hero {
   height: 100vh;
+  background-color: #0000006c;
 }
 .textContainer {
   width: 100%;
@@ -15,7 +16,19 @@
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(3px);
   border-radius: 10px;
+  border-right: 1px solid #20c0fe;
+  border-left: 1px solid #20c0fe;
+  box-shadow: inset 0 0 0.5rem 0 rgba(32, 191, 254, 0.3),
+    0 0.1rem 0.5rem 0.1rem rgba(32, 191, 254, 0.3);
+  /* position: relative; */
 }
+/* .textContainer::after {
+  content: "";
+  height: 100%;
+  width: 1px;
+  color: aqua;
+  position: absolute;
+} */
 
 .learnMore {
   font-size: var(--text-size-sm);

@@ -1,7 +1,7 @@
 .card {
   display: flex;
-  padding: 0.5rem 4rem 0.1rem;
-  gap: 5rem;
+  padding: 0.5rem 4rem 0.3rem;
+  gap: 15rem;
   width: 100%;
   text-transform: uppercase;
   color: var(--color-text-dark);
@@ -23,21 +23,16 @@
 .sertificate {
   opacity: 0;
   transform: translateX(200px);
-  /* transform: translate3d(200px); */
 }
 .s1 {
   background-color: rgba(166, 0, 91, 0.9);
-  /* opacity: 0; */
 }
 .s2 {
   background-color: rgba(85, 0, 61, 0.8);
-  /* opacity: 0; */
 }
 .s3 {
   background-color: rgba(45, 0, 68, 0.8);
-  /* opacity: 0; */
 }
 .s4 {
   background-color: rgba(166, 0, 91, 0.9);
-  /* opacity: 0; */
 }

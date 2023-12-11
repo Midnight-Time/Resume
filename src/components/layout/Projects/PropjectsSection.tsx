@@ -11,34 +11,50 @@ const ProjectsSection = () => {
     <div className={classes.container}>
       <h2 className="h2_projSection">Проекты</h2>
       <div className={classes.innerContainer}>
-        <div className={`image_projSection ${classes.image}`}></div>
+        <a href="https://note-app-crud.netlify.app/" target="blank">
+          <div className={`image_projSection ${classes.image}`}>
+            <span>Notes App</span>
+          </div>
+        </a>
         <div className={classes.descContainer}>
           <div className="text_projSection">
             <h3>вэб-приложение</h3>
-            <span>Онлайн редактор кода</span>
+            <span>Онлайн редактор заметок</span>
           </div>
           <p className="text_projSection">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            consequuntur similique modi eum doloremque reiciendis ex earum
-            tempore animi ducimus perferendis soluta eveniet, ut officiis non
-            quia deserunt aspernatur! Est! <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            consequuntur similique modi eum doloremque reiciendis ex earum
+            Cозданиe, редактирование и удаление заметок. Поиск по тэгу. Тэги
+            формируются корректно как на русском, так и на анлийском языке, нет
+            лишних символов.
+            <br />
+            <h4>UI/UX:</h4>
+            Сообщение, если поиск по тэгу не дал результатов. Поиск происходит
+            при клике на тэг (один или несколько), а также при вводе тэгов
+            вручную. При сохранении новой заметки поле поиска очищается
+            автоматически.
+            <br />
+            <h4>Технические аспекты:</h4>
+            React-приложение, написанное на Typescript (типизация 95-100%).
+            Контроль состояний: React Redux toolkit. Интерфейс: библиотека
+            MaterialUI. База данных: Firebase.
           </p>
 
           <div className={`tags_projSection ${classes.tagsContainer}`}>
             <button className={classes.btn__tag}>React</button>
             <button className={classes.btn__tag}>Typescript</button>
-            <button className={classes.btn__tag}>CSS</button>
+            <button className={classes.btn__tag}>MaterialUI</button>
           </div>
 
-          <button className={`btn_github ${classes.btn__github}`}>
+          <a
+            href="https://github.com/Midnight-Time/Notes-App-CRUD"
+            target="blank"
+            className={`btn_github ${classes.btn__github}`}
+          >
             Перейти на GitHub
             <FontAwesomeIcon
               icon={faArrowRight}
               className={classes.arrowIcon}
             />
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -1,5 +1,11 @@
 .container {
-  background-color: var(--color-background);
+  background-image: linear-gradient(
+    to bottom,
+    #2d00443c,
+    #20bffee1 2%,
+    #ffc1e3 80%,
+    #fff
+  );
   padding: 15rem 10rem 5rem;
   position: relative;
   z-index: 20;
@@ -18,28 +24,35 @@
   align-items: center;
   gap: 3rem;
   margin: 5rem auto;
-  max-width: 70rem;
+  max-width: 80rem;
 }
 
 .image {
   width: 25rem;
-  height: 85%;
+  height: 40rem;
   background-color: var(--color-primary-dark);
-  background-image: url(../../../assets/logo.png);
+  color: var(--color-accent-blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 11rem;
+  line-height: 1.2;
 }
 
 .descContainer {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .descContainer h3 {
   text-transform: uppercase;
   font-size: 1.4rem;
-  color: var(--color-gray-400);
+  color: rgba(166, 0, 91, 0.6);
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 .descContainer span {
@@ -50,19 +63,18 @@
 .tagsContainer {
   display: flex;
   gap: 1.5rem;
-  margin-top: -0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .btn__tag {
-  background-color: var(--color-primary-dark);
+  background-color: rgba(45, 0, 68, 0.8);
   padding: 0.6rem 1.2rem;
-  border-radius: 100px;
+  border-radius: 8px;
   font-size: 1.2rem;
   color: var(--color-text-light);
   transition: all 0.3s;
 }
 .btn__tag:hover {
-  background-color: var(--color-primary-md);
+  background-color: rgba(166, 0, 91, 0.9);
 }
 
 .btn__github {
@@ -78,6 +90,7 @@
   border: 1px solid var(--color-text-dark);
   color: var(--color-text-dark);
   transition: all 0.3s;
+  line-height: 1;
 }
 .btn__github:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);

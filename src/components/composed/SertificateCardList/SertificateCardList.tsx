@@ -30,7 +30,8 @@ const SertificateCardList: React.FC<SertifCardProps> = (props) => {
     <>
       {props.cards.map((card) => (
         <a
-          href="#g"
+          href={card.sourse}
+          target="blank"
           id={card.id}
           className={`${classes[card.id]} ${classes.card} sertificate  ${
             classes.sertificate

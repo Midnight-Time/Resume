@@ -1,6 +1,7 @@
 .container {
   padding: 10rem;
   color: var(--color-text-light);
+  background-color: #0000006c;
 }
 .heading {
   text-align: center;
