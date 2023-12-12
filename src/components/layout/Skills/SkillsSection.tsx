@@ -1,14 +1,5 @@
 import classes from "./SkillsSection.module.css";
 /////
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faCode,
-  faMedal,
-  faPalette,
-  faHandshakeAngle,
-} from "@fortawesome/free-solid-svg-icons";
-////
 import { gsap } from "gsap/gsap-core";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -19,14 +10,6 @@ const SkillsSection = () => {
     <div className={classes.container}>
       <h2 className={`h2_skillsSection ${classes.heading}`}>Навыки и умения</h2>
       <div className={classes.innerContainer}>
-        <FontAwesomeIcon
-          icon={faCode}
-          className={`icon_skillSection ${classes.iconSkill}`}
-        />
-        <FontAwesomeIcon
-          icon={faPlay}
-          className={`arrow_skillsSection ${classes.iconRight}`}
-        />
         <div
           className={`card_skillsSection card_skillsSection_1 ${classes.skillCard}`}
         >
@@ -38,16 +21,8 @@ const SkillsSection = () => {
             интернет-сайтов.
           </p>
         </div>
-        <FontAwesomeIcon
-          icon={faMedal}
-          className={`icon_skillSection ${classes.iconSkill}`}
-        />
-        <FontAwesomeIcon
-          icon={faPlay}
-          className={`arrow_skillsSection ${classes.iconRight}`}
-        />
         <div
-          className={`card_skillsSection card_skillsSection_2 ${classes.skillCard}`}
+          className={`card_skillsSection card_skillsSection_1 ${classes.skillCard}`}
         >
           <h3>Создание приложений</h3>
           <p>
@@ -56,15 +31,6 @@ const SkillsSection = () => {
             считывания, редактирования или удаления данных пользователем.
           </p>
         </div>
-
-        <FontAwesomeIcon
-          icon={faHandshakeAngle}
-          className={`icon_skillSection ${classes.iconSkill}`}
-        />
-        <FontAwesomeIcon
-          icon={faPlay}
-          className={`arrow_skillsSection ${classes.iconRight}`}
-        />
         <div
           className={`card_skillsSection card_skillsSection_3 ${classes.skillCard}`}
         >
@@ -75,14 +41,6 @@ const SkillsSection = () => {
             на действия пользователя (подсказки, уведомления).
           </p>
         </div>
-        <FontAwesomeIcon
-          icon={faPalette}
-          className={`icon_skillSection ${classes.iconSkill}`}
-        />
-        <FontAwesomeIcon
-          icon={faPlay}
-          className={`arrow_skillsSection ${classes.iconRight}`}
-        />
         <div
           className={`card_skillsSection card_skillsSection_4 ${classes.skillCard}`}
         >

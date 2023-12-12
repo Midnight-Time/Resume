@@ -12,7 +12,7 @@ import { CSSPlugin } from "gsap/CSSPlugin";
 gsap.registerPlugin(CSSPlugin);
 /////
 
-const HeroSection = () => {
+const Hero = () => {
   const iconRef = useRef<SVGSVGElement>(null);
 
   useLayoutEffect(() => {
@@ -48,4 +48,4 @@ const HeroSection = () => {
     </div>
   );
 };
-export default HeroSection;
+export default Hero;

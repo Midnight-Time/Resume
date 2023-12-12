@@ -1,9 +1,11 @@
-import classes from "./TechStack.module.css";
+import classes from "./TechStackSection.module.css";
 /////
+// Необходимо не только импортировать, но и применить в любом месте страницы, чтобы иконки были везде доступны
 import { IconsSpriteTechContainer } from "../../common/Icon/IconsSpriteContainer";
 import { Icon, IconTechNames, IconSize } from "../../common/Icon/Icon";
 
-const TechStack = () => {
+const TechStackSection = () => {
+  // Создаею массив из всех иконок, которые используем из enums IconTechNames
   const techIconNames = Object.keys(IconTechNames) as Array<
     keyof typeof IconTechNames
   >;
@@ -47,4 +49,4 @@ const TechStack = () => {
     </>
   );
 };
-export default TechStack;
+export default TechStackSection;

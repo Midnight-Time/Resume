@@ -11,12 +11,8 @@ const Footer = () => {
         <cite>-Martin Golding</cite>
       </div>
       <div className={classes.underline}>
-        <div className={classes.textGroup}>
-          <span>Полина Филипенко</span>
-          <span>2023</span>
-        </div>
-        <div className={classes.downloadCV}>
-          <button>Скачать CV</button>
+        <div>
+          <span>Полина Филипенко (Polina Filipenko), 2023</span>
         </div>
       </div>
     </div>

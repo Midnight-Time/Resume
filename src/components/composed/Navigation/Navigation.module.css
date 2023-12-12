@@ -23,7 +23,8 @@
 .logo:hover {
   filter: brightness(1);
 }
-
+/* Пока нет на странице, будет в виде бокового меню */
+/*
 .navList {
   display: flex;
   align-items: center;
@@ -54,7 +55,7 @@
 .link:hover::before {
   width: 100%;
 }
-
+*/
 .menuIcon {
   height: 4rem;
   width: 4rem;
@@ -64,7 +65,6 @@
   position: fixed;
   z-index: 999;
 }
-
 .menuIcon:hover {
   filter: brightness(1);
 }

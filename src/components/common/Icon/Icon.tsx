@@ -8,12 +8,6 @@ export enum IconSize {
   "2x1" = "26px",
 }
 
-export enum IconNames {
-  ru = "ru-flag",
-  eng = "eng-flag",
-  germ = "germany-flag",
-}
-
 export enum IconTechNames {
   css = "css-3",
   figma = "figma",
@@ -31,14 +25,14 @@ export enum IconTechNames {
 }
 
 export type IconProps = {
-  name?: IconNames | IconTechNames;
+  name?: IconTechNames;
   color?: string;
   size?: IconSize;
   className?: string;
 };
 
 export function Icon({
-  name = IconNames.ru,
+  name = IconTechNames.react,
   color = "currentColor",
   size = IconSize.m,
   className,

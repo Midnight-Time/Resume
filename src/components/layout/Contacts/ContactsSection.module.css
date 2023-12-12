@@ -1,18 +1,9 @@
 .container {
-  /* background-color: var(--color-background); */
-  /* background-image: linear-gradient(
-    to bottom,
-    #fff 94%,
-    rgba(255, 255, 255, 0.9) 95%,
-    rgba(255, 255, 255, 0.6) 97%,
-    rgba(255, 255, 255, 0.3)
-  ); */
-
   background-image: linear-gradient(
     to top,
     #2d00443c,
-    #20bffe 2%,
-    #ffc1e3 80%,
+    #fff 2%,
+    #ffc1e3 20%,
     #fff
   );
   padding: 15rem 10rem 0rem;

@@ -1,5 +1,5 @@
-import HeroSection from "../components/layout/HeroSection/Hero";
-import TechStack from "../components/layout/TechStack/TechStack";
+import Hero from "../components/layout/Hero/Hero";
+import TechStackSection from "../components/layout/TechStack/TechStackSection";
 import SkillsSection from "../components/layout/Skills/SkillsSection";
 import ProjectsSection from "../components/layout/Projects/PropjectsSection";
 import SerttifSection from "../components/layout/Sertificates/SertifSection";
@@ -9,8 +9,8 @@ import Footer from "../components/layout/Footer/Footer";
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
-      <TechStack />
+      <Hero />
+      <TechStackSection />
       <SkillsSection />
       <ProjectsSection />
       <SerttifSection />

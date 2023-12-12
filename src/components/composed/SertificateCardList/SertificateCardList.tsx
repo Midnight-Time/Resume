@@ -2,7 +2,6 @@ import classes from "./SertficateCardList.module.css";
 /////
 import { gsap } from "gsap/gsap-core";
 import { useLayoutEffect } from "react";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface SertifCardProps {
   cards: {
@@ -15,6 +14,7 @@ interface SertifCardProps {
 }
 
 const SertificateCardList: React.FC<SertifCardProps> = (props) => {
+  // Анимация должна быть без прямой манипуляции DOM
   useLayoutEffect(() => {
     gsap.to(".sertificate", {
       x: 0,
