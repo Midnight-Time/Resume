@@ -18,7 +18,7 @@ const HeroSection = () => {
   useLayoutEffect(() => {
     gsap.to(iconRef.current, {
       duration: 0.5,
-      y: -7,
+      y: -10,
       repeat: -1,
       yoyo: true,
     });
@@ -30,14 +30,14 @@ const HeroSection = () => {
       <Navigation />
       <div className={classes.textContainer}>
         <h1>
-          Front-end <br /> разработка
+          Front-end <br /> developer
         </h1>
         <p>
           Меня зовут Полина, мне нравятся интересные идеи <br /> и я знаю как
           воплотить их в жизнь!
         </p>
         <div className={classes.learnMore}>
-          <p>Узнать больше</p>
+          <span>Узнать больше</span>
           <FontAwesomeIcon
             icon={faAngleDown}
             className={classes.icon}

@@ -18,8 +18,8 @@ const ProjectsSection = () => {
         </a>
         <div className={classes.descContainer}>
           <div className="text_projSection">
-            <h3>вэб-приложение</h3>
             <span>Онлайн редактор заметок</span>
+            <h3>вэб-приложение</h3>
           </div>
           <p className="text_projSection">
             Cозданиe, редактирование и удаление заметок. Поиск по тэгу. Тэги

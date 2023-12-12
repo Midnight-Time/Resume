@@ -8,7 +8,7 @@ const Footer = () => {
           “Always code as if the guy who ends up maintaining your code will be a
           violent psychopath who knows where you live.”
         </blockquote>
-        <span>-Martin Golding</span>
+        <cite>-Martin Golding</cite>
       </div>
       <div className={classes.underline}>
         <div className={classes.textGroup}>

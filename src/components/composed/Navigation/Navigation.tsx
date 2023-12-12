@@ -1,9 +1,11 @@
 import classes from "./Navigation.module.css";
-import logo from "../../../assets/logo.png";
+// import logo from "../../../assets/logo.png";
 ////
 // Необходимо не только импортировать, но и применить в любом месте страницы, чтобы иконки были везде доступны
 import { IconsSpriteContainer } from "../../common/Icon/IconsSpriteContainer";
-import { Icon, IconNames, IconSize } from "../../common/Icon/Icon";
+// import { Icon, IconNames, IconSize } from "../../common/Icon/Icon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   return (
@@ -13,16 +15,16 @@ const Navigation = () => {
         <div className={classes.innerContainer}>
           <div>
             <a href="#j">
-              <img src={logo} alt={logo} className={classes.logo} />
+              <span className={classes.logo}>PF</span>
             </a>
           </div>
-          <ul className={classes.navList}>
+          {/* <ul className={classes.navList}>
             <li>
               <a href="#j" className={classes.link}>
                 Главная
               </a>
-            </li>
-            <li>
+            </li> 
+             <li>
               <a href="#j" className={`${classes.link} ${classes.active}`}>
                 Проекты
               </a>
@@ -32,13 +34,9 @@ const Navigation = () => {
                 Контакты
               </a>
             </li>
-          </ul>
-          <button className={classes.changeLanguageBtn}>
-            <Icon
-              name={IconNames.ru}
-              className={classes.flag}
-              size={IconSize.custom}
-            />
+          </ul>  */}
+          <button className={classes.btn}>
+            <FontAwesomeIcon icon={faBars} className={`${classes.menuIcon}`} />
           </button>
         </div>
       </div>
