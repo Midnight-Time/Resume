@@ -20,9 +20,8 @@ const SertificateCardList: React.FC<SertifCardProps> = (props) => {
       x: 0,
       duration: 1,
       opacity: 1,
-      // ease: "none",
       ease: "power4.out",
-      // stagger: 0.2,
+      stagger: 0.2,
     });
   });
 

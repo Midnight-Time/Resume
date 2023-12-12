@@ -23,6 +23,7 @@
 .sertificate {
   opacity: 0;
   transform: translateX(200px);
+  border-radius: 3px;
 }
 .s1 {
   background-color: rgba(166, 0, 91, 0.9);

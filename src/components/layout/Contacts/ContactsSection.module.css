@@ -1,0 +1,43 @@
+.container {
+  /* background-color: var(--color-background); */
+  /* background-image: linear-gradient(
+    to bottom,
+    #fff 94%,
+    rgba(255, 255, 255, 0.9) 95%,
+    rgba(255, 255, 255, 0.6) 97%,
+    rgba(255, 255, 255, 0.3)
+  ); */
+
+  background-image: linear-gradient(
+    to top,
+    #2d00443c,
+    #20bffe 2%,
+    #ffc1e3 80%,
+    #fff
+  );
+  padding: 15rem 10rem 0rem;
+  position: relative;
+  z-index: 20;
+  overflow: visible;
+  height: 98vh;
+}
+.heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 6rem;
+}
+.socials {
+  display: flex;
+  max-width: 80rem;
+  margin: 10rem auto;
+  gap: 10rem;
+  justify-content: center;
+}
+.icon {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--color-primary-md);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--color-text-light);
+}

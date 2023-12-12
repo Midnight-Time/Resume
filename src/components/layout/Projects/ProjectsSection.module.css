@@ -2,7 +2,7 @@
   background-image: linear-gradient(
     to bottom,
     #2d00443c,
-    #20bffee1 2%,
+    #20bffe 2%,
     #ffc1e3 80%,
     #fff
   );
@@ -15,6 +15,7 @@
   text-align: center;
   font-weight: 700;
   letter-spacing: 3px;
+  font-size: 4rem;
 }
 .innerContainer {
   z-index: 20;
