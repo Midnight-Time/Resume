@@ -3,8 +3,8 @@
   background-color: #0000006c;
 }
 .textContainer {
-  width: 60vw;
-  max-width: max-content;
+  max-width: 60rem;
+  /* max-width: max-content; */
   padding: 3rem 7rem;
   margin: 8rem auto;
   color: var(--color-text-light);
@@ -34,9 +34,9 @@
 }
 
 /* MEDIA */
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 56.25em) {
   .textContainer {
-    padding: 3rem;
     width: 70vw;
+    padding: 3rem;
   }
 }

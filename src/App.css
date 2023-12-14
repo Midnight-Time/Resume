@@ -27,6 +27,9 @@ h4 {
 p {
   font-size: var(--text-size-md);
 }
+article {
+  font-size: var(--text-size-sm);
+}
 button {
   background: none;
   border: none;

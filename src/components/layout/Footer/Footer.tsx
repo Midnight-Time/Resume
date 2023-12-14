@@ -12,7 +12,10 @@ const Footer = () => {
       </div>
       <div className={classes.underline}>
         <div>
-          <span>Полина Филипенко (Polina Filipenko), 2023</span>
+          <span>
+            Полина Филипенко <br />
+            (Polina Filipenko) 2023
+          </span>
         </div>
       </div>
     </div>

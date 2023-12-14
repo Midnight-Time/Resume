@@ -25,17 +25,71 @@
 .logo:hover {
   filter: brightness(1);
 }
-/* Пока нет на странице, будет в виде бокового меню */
-/*
-.navList {
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
+.menuIcon {
+  height: 4rem;
+  color: var(--color-text-light);
+  filter: brightness(0.7);
+  transition: filter 0.3s;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 999;
 }
+.menuIcon:hover {
+  filter: brightness(1);
+}
+
+/* Пока нет на странице, будет в виде бокового меню */
+
+.background {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  background-color: rgba(20, 0, 30, 0.8);
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.background.active {
+  /* display: block; */
+  opacity: 1;
+}
+
+.navContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 998;
+  width: 35vw;
+  height: 100vh;
+  background-color: var(--color-text-dark);
+  border-left: 1px solid rgba(32, 191, 254, 0.301);
+  box-shadow: inset 0 0 0.5rem 0 rgba(32, 191, 254, 0.3),
+    0 0.1rem 1rem 0.5rem rgba(32, 191, 254, 0.3);
+  transform: translateX(105%);
+  transition: all 0.5s;
+}
+.navContainer.active {
+  transform: translateX(0);
+}
+.navList {
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  text-transform: uppercase;
+  padding: 15rem 7rem;
+}
+
 .link {
   color: var(--color-text-light);
   position: relative;
   transition: all 0.5s ease-out;
+  font-size: var(--text-size-large);
 }
 .link:hover,
 .link:active {
@@ -57,20 +111,6 @@
 .link:hover::before {
   width: 100%;
 }
-*/
-.menuIcon {
-  height: 4rem;
-  color: var(--color-text-light);
-  filter: brightness(0.7);
-  transition: filter 0.3s;
-  position: fixed;
-  top: 4rem;
-  right: 4rem;
-  z-index: 999;
-}
-.menuIcon:hover {
-  filter: brightness(1);
-}
 
 /* MEDIA */
 @media only screen and (max-width: 56.25em) {
@@ -79,6 +119,9 @@
   }
   .menuIcon {
     height: 3rem;
+  }
+  .navContainer {
+    width: 50vw;
   }
 }
 @media only screen and (max-width: 31.25em) {

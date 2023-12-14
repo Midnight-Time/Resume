@@ -31,7 +31,7 @@
 
 .underline {
   width: 35vw;
-  border-top: 1px solid #20bffe8e;
+  border-top: 1px solid rgba(32, 191, 254, 0.557);
   padding: 2rem 0;
   font-size: var(--text-size-sm);
   text-align: center;

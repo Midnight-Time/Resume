@@ -37,7 +37,7 @@
   color: var(--color-text-dark);
 }
 .skillCard p {
-  line-height: 150%;
+  font-size: var(--text-size-sm);
 }
 
 /* MEDIA */

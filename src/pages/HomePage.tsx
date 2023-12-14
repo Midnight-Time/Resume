@@ -8,7 +8,7 @@ import Footer from "../components/layout/Footer/Footer";
 
 const HomePage = () => {
   return (
-    <>
+    <div id="home">
       <Hero />
       <TechStackSection />
       <SkillsSection />
@@ -16,7 +16,7 @@ const HomePage = () => {
       <SerttifSection />
       <ContactsSection />
       <Footer />
-    </>
+    </div>
   );
 };
 export default HomePage;

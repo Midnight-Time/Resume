@@ -6,7 +6,7 @@ import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 
 const ContactsSection = () => {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="contactMe">
       <h2 className={classes.heading}>Связаться со мной</h2>
       <div className={classes.socials}>
         <a href="#r">

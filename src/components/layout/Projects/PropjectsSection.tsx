@@ -8,7 +8,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectsSection = () => {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="projects">
       <h2 className="h2_projSection">Проекты</h2>
       <div className={classes.innerContainer}>
         <a href="https://note-app-crud.netlify.app/" target="blank">
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
             <h3>Онлайн редактор заметок</h3>
             <span>вэб-приложение</span>
           </div>
-          <p className="text_projSection">
+          <article className="text_projSection">
             Cозданиe, редактирование и удаление заметок. Поиск по тэгу. Тэги
             формируются корректно как на русском, так и на анлийском языке, нет
             лишних символов.
@@ -36,7 +36,7 @@ const ProjectsSection = () => {
             React-приложение, написанное на Typescript (типизация 95-100%).
             Контроль состояний: React Redux toolkit. Интерфейс: библиотека
             MaterialUI. База данных: Firebase.
-          </p>
+          </article>
 
           <div className={`tags_projSection ${classes.tagsContainer}`}>
             <button className={classes.btn__tag}>React</button>
