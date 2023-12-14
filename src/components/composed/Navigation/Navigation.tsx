@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 /////
 import { useRef } from "react";
+import { Link } from "react-scroll";
 /////
 import CV from "../../../assets/Polina Filipenko.pdf";
 
@@ -16,14 +17,19 @@ const Navigation = () => {
     navRef.current?.classList.toggle(`${classes.active}`);
   };
 
+  const menuCloseHandler = () => {
+    backgroundRef.current?.classList.remove(`${classes.active}`);
+    navRef.current?.classList.remove(`${classes.active}`);
+  };
+
   return (
     <>
       <div className={classes.container}>
         <div className={classes.innerContainer}>
-          <div>
-            <a href="#home">
+          <div onClick={menuCloseHandler}>
+            <Link to="home" spy smooth delay={200} onClick={menuCloseHandler}>
               <span className={classes.logo}>PF</span>
-            </a>
+            </Link>
           </div>
           <button className={classes.btn} onClick={menuOpenHandler}>
             <FontAwesomeIcon icon={faBars} className={`${classes.menuIcon}`} />
@@ -34,26 +40,45 @@ const Navigation = () => {
       <div className={classes.navContainer} ref={navRef}>
         <ul className={classes.navList}>
           <li>
-            <a href="#home" className={classes.link}>
+            <Link
+              to="home"
+              spy
+              smooth
+              delay={200}
+              className={classes.link}
+              onClick={menuCloseHandler}
+            >
               Главная
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" className={`${classes.link} ${classes.active}`}>
+            <Link
+              to="projects"
+              spy
+              smooth
+              delay={200}
+              className={classes.link}
+              onClick={menuCloseHandler}
+            >
               Проекты
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contactMe" className={classes.link}>
+            <Link
+              to="contactMe"
+              spy
+              smooth
+              delay={200}
+              className={classes.link}
+              onClick={menuCloseHandler}
+            >
               Контакты
-            </a>
-          </li>
-          <li>
-            <a href={CV} className={classes.link} download>
-              Скачать CV
-            </a>
+            </Link>
           </li>
         </ul>
+        <a href={CV} className={classes.linkCV} download>
+          Скачать CV
+        </a>
       </div>
     </>
   );

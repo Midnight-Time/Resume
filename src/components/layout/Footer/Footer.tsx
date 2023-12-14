@@ -1,6 +1,15 @@
 import classes from "./Footer.module.css";
+/////
+import { useRef, useLayoutEffect } from "react";
 
 const Footer = () => {
+  const yearRef = useRef<HTMLSpanElement>(null);
+  const currentYear = new Date().getFullYear().toString();
+
+  useLayoutEffect(() => {
+    yearRef.current!.textContent = currentYear;
+  });
+
   return (
     <div className={classes.footer}>
       <div className={classes.quote}>
@@ -14,7 +23,10 @@ const Footer = () => {
         <div>
           <span>
             Полина Филипенко <br />
-            (Polina Filipenko) 2023
+            (Polina Filipenko){" "}
+            <span id="year" ref={yearRef}>
+              2023
+            </span>
           </span>
         </div>
       </div>
