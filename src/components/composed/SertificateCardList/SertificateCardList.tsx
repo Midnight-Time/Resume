@@ -32,9 +32,7 @@ const SertificateCardList: React.FC<SertifCardProps> = (props) => {
           href={card.sourse}
           target="blank"
           id={card.id}
-          className={`${classes[card.id]} ${classes.card} sertificate  ${
-            classes.sertificate
-          }`}
+          className={`${classes[card.id]} ${classes.card} sertificate`}
           key={card.id}
         >
           <span className={classes.learnMore}>Унать больше</span>

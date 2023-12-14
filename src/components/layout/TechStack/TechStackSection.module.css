@@ -14,12 +14,11 @@
   overflow-x: hidden;
 }
 .heading {
-  font-family: "Playfair Display", serif;
   color: var(--color-accent-blue);
   letter-spacing: 3rem;
   margin-right: -3rem;
-  font-size: 4rem;
-  font-weight: 300;
+  padding: 0 4rem;
+  text-align: center;
 }
 
 @keyframes move {
@@ -70,4 +69,21 @@
 .listItem:hover {
   filter: brightness(1);
   transform: scale(1.05);
+}
+
+/* MEDIA */
+@media only screen and (max-width: 31.25em) {
+  .innerContainer {
+    gap: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+  .listItem {
+    height: 50px;
+    width: 50px;
+    margin: 0 30px;
+  }
+  .heading {
+    letter-spacing: 5px;
+  }
 }

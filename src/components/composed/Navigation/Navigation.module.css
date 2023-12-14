@@ -18,6 +18,8 @@
   filter: brightness(0.7);
   transition: filter 0.3s;
   position: fixed;
+  top: 4rem;
+  left: 4rem;
   z-index: 999;
 }
 .logo:hover {
@@ -58,13 +60,34 @@
 */
 .menuIcon {
   height: 4rem;
-  width: 4rem;
   color: var(--color-text-light);
   filter: brightness(0.7);
   transition: filter 0.3s;
   position: fixed;
+  top: 4rem;
+  right: 4rem;
   z-index: 999;
 }
 .menuIcon:hover {
   filter: brightness(1);
+}
+
+/* MEDIA */
+@media only screen and (max-width: 56.25em) {
+  .logo {
+    font-size: 3rem;
+  }
+  .menuIcon {
+    height: 3rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .logo {
+    top: 3rem;
+    left: 3rem;
+  }
+  .menuIcon {
+    top: 3rem;
+    right: 3rem;
+  }
 }

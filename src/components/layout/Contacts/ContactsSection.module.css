@@ -14,14 +14,13 @@
 }
 .heading {
   text-align: center;
-  font-weight: 700;
-  font-size: 6rem;
+  font-size: clamp(2.4rem, 5vw, 6rem);
 }
 .socials {
   display: flex;
   max-width: 80rem;
   margin: 10rem auto;
-  gap: 10rem;
+  gap: 10vw;
   justify-content: center;
 }
 .icon {
@@ -29,6 +28,24 @@
   height: 8rem;
   background-color: var(--color-primary-md);
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius-large);
   color: var(--color-text-light);
+}
+
+/* MEDIA */
+@media only screen and (max-width: 56.25em) {
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+/* MEDIA */
+@media only screen and (max-width: 31.25em) {
+  .container {
+    padding: 10rem 3rem 5rem;
+  }
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
 }

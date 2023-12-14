@@ -12,14 +12,14 @@ const ProjectsSection = () => {
       <h2 className="h2_projSection">Проекты</h2>
       <div className={classes.innerContainer}>
         <a href="https://note-app-crud.netlify.app/" target="blank">
-          <div className={`image_projSection ${classes.image}`}>
+          <div className={`image_projSection ${classes.imageLink}`}>
             <span>Notes App</span>
           </div>
         </a>
         <div className={classes.descContainer}>
           <div className="text_projSection">
-            <span>Онлайн редактор заметок</span>
-            <h3>вэб-приложение</h3>
+            <h3>Онлайн редактор заметок</h3>
+            <span>вэб-приложение</span>
           </div>
           <p className="text_projSection">
             Cозданиe, редактирование и удаление заметок. Поиск по тэгу. Тэги

@@ -1,29 +1,27 @@
 .card {
-  display: flex;
-  padding: 0.5rem 4rem 0.3rem;
-  gap: 15rem;
-  width: 100%;
-  text-transform: uppercase;
   color: var(--color-text-dark);
+  display: flex;
+  gap: 12vw;
+  padding: 0.5rem 4rem 0.3rem;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  opacity: 0;
+  transform: translateX(200px);
 }
 .card:hover {
   filter: brightness(60%);
 }
 .learnMore {
   align-self: flex-end;
-  font-size: 1rem;
+  font-size: var(--text-size-sm);
   font-weight: 700;
 }
 .courseName {
   align-self: center;
+  font-size: clamp(1.8rem, 3vw, 5rem);
   letter-spacing: 1px;
-  font-size: clamp(1rem, 3.4783vw + 0.3043rem, 6rem);
   line-height: 1.25em;
-}
-.sertificate {
-  opacity: 0;
-  transform: translateX(200px);
-  border-radius: 3px;
 }
 .s1 {
   background-color: rgba(166, 0, 91, 0.9);
@@ -36,4 +34,15 @@
 }
 .s4 {
   background-color: rgba(166, 0, 91, 0.9);
+}
+
+/* MEDIA */
+@media only screen and (max-width: 56.25em) {
+  .card {
+    gap: 8vw;
+    padding: 0.5rem 2rem 0.3rem;
+  }
+  .learnMore {
+    width: 10vw;
+  }
 }
