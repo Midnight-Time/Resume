@@ -26,8 +26,8 @@ const Hero = () => {
 
   return (
     <div className={classes.hero}>
-      <Video />
       <Navigation />
+      <Video />
       <div className={classes.textContainer}>
         <h1>
           Front-end <br /> developer
