@@ -40,8 +40,6 @@
   filter: brightness(1);
 }
 
-/* Пока нет на странице, будет в виде бокового меню */
-
 .background {
   position: fixed;
   top: 0;

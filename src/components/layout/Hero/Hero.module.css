@@ -1,6 +1,7 @@
 .hero {
   height: 100vh;
   background-color: #0000006c;
+  /* width: 100%; */
 }
 .textContainer {
   max-width: 60rem;
