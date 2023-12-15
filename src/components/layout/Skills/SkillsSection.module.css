@@ -9,12 +9,10 @@
 }
 
 .innerContainer {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 4rem;
+  margin: 5rem auto 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
   max-width: 80rem;
 }
 
@@ -34,20 +32,19 @@
 }
 
 .skillCard h3 {
-  color: var(--color-text-dark);
+  color: var(--color-accent-blue);
 }
 .skillCard p {
-  font-size: var(--text-size-sm);
+  font-size: var(--text-size-md);
 }
 
 /* MEDIA */
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 56.25em) {
   .container {
     padding: 10rem 3rem 5rem;
   }
-  .skillCard h3 {
-    text-align: center;
-    line-height: 1;
-    margin-bottom: 1rem;
+  .innerContainer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 }
