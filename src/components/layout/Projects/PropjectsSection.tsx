@@ -18,8 +18,13 @@ const ProjectsSection = () => {
         </a>
         <div className={classes.descContainer}>
           <div className="text_projSection">
-            <h3>Онлайн редактор заметок</h3>
-            <span>вэб-приложение</span>
+            <a
+              href="https://github.com/Midnight-Time/Notes-App-CRUD"
+              target="blank"
+            >
+              <h3>Онлайн редактор заметок</h3>
+            </a>
+            <span>вэб-приложение (desktop)</span>
           </div>
           <article className="text_projSection">
             Cозданиe, редактирование и удаление заметок. Поиск по тэгу. Тэги

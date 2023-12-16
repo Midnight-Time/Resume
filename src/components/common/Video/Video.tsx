@@ -1,5 +1,6 @@
 import classes from "./Video.module.css";
-import video from "../../../assets/красно голубой.mp4";
+import video from "../../../assets/bgVideo.mp4";
+import videoWebm from "../../../assets/bgVideo.webm";
 /////
 
 const Video = () => {
@@ -10,6 +11,7 @@ const Video = () => {
     <div className={classes.bgVideo} style={{ width: videoWidth }}>
       <video autoPlay muted loop className={classes.video}>
         <source src={video} type="video/mp4" />
+        <source src={videoWebm} type="video/webm" />
       </video>
     </div>
   );
