@@ -1,27 +1,24 @@
 import classes from "./Hero.module.css";
-//////
 import Navigation from "../../composed/Navigation/Navigation";
 import Video from "../../common/Video/Video";
 /////
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 /////
+import { useRef } from "react";
+/////
 import { gsap } from "gsap/gsap-core";
-import { useLayoutEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import { learnMoreAnim } from "../../../animations";
 gsap.registerPlugin(CSSPlugin);
 /////
 
 const Hero = () => {
   const iconRef = useRef<SVGSVGElement>(null);
 
-  useLayoutEffect(() => {
-    gsap.to(iconRef.current, {
-      duration: 0.5,
-      y: -10,
-      repeat: -1,
-      yoyo: true,
-    });
+  useGSAP(() => {
+    learnMoreAnim(iconRef);
   });
 
   return (
