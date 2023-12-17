@@ -1,6 +1,6 @@
 import classes from "./SertficateCardList.module.css";
 /////
-import { gsap } from "gsap/gsap-core";
+import { sertifSectionAnim } from "../../../animations";
 import { useLayoutEffect } from "react";
 
 interface SertifCardProps {
@@ -14,19 +14,13 @@ interface SertifCardProps {
 }
 
 const SertificateCardList: React.FC<SertifCardProps> = (props) => {
-  // Анимация должна быть без прямой манипуляции DOM
+  // Через useLayoutEffect потому что динамически выводятся данные и до построения мы не можем использовать useRef для каждого элемента
   useLayoutEffect(() => {
-    gsap.to(".sertificate", {
-      x: 0,
-      duration: 1,
-      opacity: 1,
-      ease: "power4.out",
-      stagger: 0.2,
-    });
+    sertifSectionAnim();
   });
 
   return (
-    <>
+    <div className="sertif_container">
       {props.cards.map((card) => (
         <a
           href={card.sourse}
@@ -39,7 +33,7 @@ const SertificateCardList: React.FC<SertifCardProps> = (props) => {
           <span className={classes.courseName}>{card.courseName}</span>
         </a>
       ))}
-    </>
+    </div>
   );
 };
 export default SertificateCardList;

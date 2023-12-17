@@ -10,22 +10,24 @@ import { useRef } from "react";
 import { gsap } from "gsap/gsap-core";
 import { useGSAP } from "@gsap/react";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { learnMoreAnim } from "../../../animations";
+import { heroAnim } from "../../../animations";
 gsap.registerPlugin(CSSPlugin);
 /////
 
 const Hero = () => {
-  const iconRef = useRef<SVGSVGElement>(null);
-
-  useGSAP(() => {
-    learnMoreAnim(iconRef);
-  });
+  const container = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      heroAnim();
+    },
+    { scope: container }
+  );
 
   return (
-    <div className={classes.hero}>
+    <div className={classes.hero} ref={container}>
       <Navigation />
       <Video />
-      <div className={classes.textContainer}>
+      <div className={`hero_text-container ${classes.textContainer}`}>
         <h1>
           Front-end <br /> developer
         </h1>
@@ -37,8 +39,7 @@ const Hero = () => {
           <span>Узнать больше</span>
           <FontAwesomeIcon
             icon={faAngleDown}
-            className={classes.icon}
-            ref={iconRef}
+            className={`icon_hero ${classes.icon}`}
           />
         </div>
       </div>

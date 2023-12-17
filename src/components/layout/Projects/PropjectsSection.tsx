@@ -3,12 +3,22 @@ import classes from "./ProjectsSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 /////
-// import { gsap } from "gsap/gsap-core";
-// import { useLayoutEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { projSectionAnim } from "../../../animations";
 
 const ProjectsSection = () => {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      projSectionAnim();
+    },
+    { scope: container }
+  );
+
   return (
-    <div className={classes.container} id="projects">
+    <div className={classes.container} id="projects" ref={container}>
       <h2 className="h2_projSection">Проекты</h2>
       <div className={classes.innerContainer}>
         <a href="https://note-app-crud.netlify.app/" target="blank">
@@ -43,7 +53,7 @@ const ProjectsSection = () => {
             MaterialUI. База данных: Firebase.
           </article>
 
-          <div className={`tags_projSection ${classes.tagsContainer}`}>
+          <div className={`text_projSection ${classes.tagsContainer}`}>
             <button className={classes.btn__tag}>React</button>
             <button className={classes.btn__tag}>Typescript</button>
             <button className={classes.btn__tag}>MaterialUI</button>

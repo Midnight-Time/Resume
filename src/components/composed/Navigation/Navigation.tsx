@@ -1,4 +1,5 @@
 import classes from "./Navigation.module.css";
+import CV from "../../../assets/Polina Filipenko.pdf";
 /////
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +8,8 @@ import { useRef, useState } from "react";
 import { Link } from "react-scroll";
 import useScrollLock from "../../../hooks/useScrollLock";
 /////
-import CV from "../../../assets/Polina Filipenko.pdf";
+import { useGSAP } from "@gsap/react";
+import { navAnim } from "../../../animations";
 
 const Navigation = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -18,6 +20,14 @@ const Navigation = () => {
   const [logoScrollDelay, setLogoScrollDelay] = useState<number>(0);
   const [navPadding, setNavPadding] = useState<number>(0);
   const [navIsOpen, setNavIsOpen] = useState<boolean>(false);
+
+  const container = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      navAnim();
+    },
+    { scope: container }
+  );
 
   const menuOpenHandler = () => {
     // Не использовала утилиту scrollbarCompensationFn, потому что тут по другому элемент реагирует на изменение ширины экрана
@@ -56,7 +66,7 @@ const Navigation = () => {
 
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} ref={container}>
         <div className={classes.innerContainer}>
           <div onClick={menuCloseHandler}>
             <Link
@@ -66,11 +76,11 @@ const Navigation = () => {
               delay={logoScrollDelay}
               onClick={menuCloseHandler}
             >
-              <span className={classes.logo}>PF</span>
+              <span className={`logo ${classes.logo}`}>PF</span>
             </Link>
           </div>
           <button
-            className={classes.btn}
+            className={`btn_nav ${classes.btn}`}
             onClick={menuOpenHandler}
             style={{ paddingRight: navPadding }}
           >

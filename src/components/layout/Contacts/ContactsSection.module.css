@@ -30,6 +30,10 @@
   padding: 1rem;
   border-radius: var(--border-radius-large);
   color: var(--color-text-light);
+  transition: background-color 0.3s;
+}
+.icon:hover {
+  background-color: var(--color-primary-light);
 }
 
 /* MEDIA */
