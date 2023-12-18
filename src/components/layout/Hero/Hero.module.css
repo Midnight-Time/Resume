@@ -1,11 +1,12 @@
 .hero {
   height: max(100vh, fit-content);
   width: 100%;
+  padding-bottom: 5rem;
 }
 .textContainer {
   max-width: 60rem;
   padding: 3rem 7rem;
-  margin: 8rem auto;
+  margin: 6rem auto;
   color: var(--color-text-light);
   display: flex;
   flex-direction: column;

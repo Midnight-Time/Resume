@@ -2,6 +2,7 @@
   background-color: var(--color-background);
   padding: 10rem 5rem;
   z-index: 20;
+  overflow: hidden;
 }
 .heading {
   text-align: start;
@@ -11,12 +12,6 @@
   width: fit-content;
   border-bottom: 2px solid var(--color-primary-light);
 }
-
-/* .innerContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-} */
 
 @media only screen and (max-width: 31.25em) {
   .container {
