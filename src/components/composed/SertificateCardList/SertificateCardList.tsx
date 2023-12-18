@@ -1,7 +1,9 @@
 import classes from "./SertficateCardList.module.css";
 /////
-import { sertifSectionAnim } from "../../../animations";
+// import { sertifSectionAnim } from "../../../animations";
 import { useLayoutEffect } from "react";
+// import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 interface SertifCardProps {
   cards: {
@@ -16,11 +18,29 @@ interface SertifCardProps {
 const SertificateCardList: React.FC<SertifCardProps> = (props) => {
   // Через useLayoutEffect потому что динамически выводятся данные и до построения мы не можем использовать useRef для каждого элемента
   useLayoutEffect(() => {
-    sertifSectionAnim();
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".sertif_container",
+          start: "-=300 +=500",
+          end: "bottom center",
+        },
+      })
+      .fromTo(
+        ".sertificate",
+        { opacity: 0, x: 200 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power4.out",
+          stagger: 0.2,
+        }
+      );
   });
 
   return (
-    <div className="sertif_container">
+    <div className={`sertif_container ${classes.innerContainer}`}>
       {props.cards.map((card) => (
         <a
           href={card.sourse}

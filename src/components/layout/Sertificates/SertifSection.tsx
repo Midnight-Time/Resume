@@ -20,7 +20,7 @@ const SerttifSection = () => {
         <h2 className={classes.heading} ref={headingRef}>
           Сертификаты
         </h2>
-        <div className={`${classes.innerContainer}`}>
+        <div>
           <SertificateCardList cards={allSertificates} />
         </div>
       </div>

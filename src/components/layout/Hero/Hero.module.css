@@ -1,11 +1,9 @@
 .hero {
-  height: 100vh;
-  background-color: #0000006c;
+  height: max(100vh, fit-content);
   width: 100%;
 }
 .textContainer {
   max-width: 60rem;
-  /* max-width: max-content; */
   padding: 3rem 7rem;
   margin: 8rem auto;
   color: var(--color-text-light);
@@ -39,5 +37,6 @@
   .textContainer {
     width: 70vw;
     padding: 3rem;
+    height: 35%;
   }
 }

@@ -24,26 +24,29 @@ const Hero = () => {
   );
 
   return (
-    <div className={classes.hero} ref={container}>
-      <Navigation />
+    <>
       <Video />
-      <div className={`hero_text-container ${classes.textContainer}`}>
-        <h1>
-          Front-end <br /> developer
-        </h1>
-        <p>
-          Меня зовут Полина, мне нравятся интересные идеи и я знаю как воплотить
-          их в жизнь!
-        </p>
-        <div className={classes.learnMore}>
-          <span>Узнать больше</span>
-          <FontAwesomeIcon
-            icon={faAngleDown}
-            className={`icon_hero ${classes.icon}`}
-          />
+
+      <div className={classes.hero} ref={container}>
+        <Navigation />
+        <div className={`hero_text-container ${classes.textContainer}`}>
+          <h1>
+            Front-end <br /> developer
+          </h1>
+          <p>
+            Меня зовут Полина, мне нравятся интересные идеи и я знаю как
+            воплотить их в жизнь!
+          </p>
+          <div className={classes.learnMore}>
+            <span>Узнать больше</span>
+            <FontAwesomeIcon
+              icon={faAngleDown}
+              className={`icon_hero ${classes.icon}`}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Hero;

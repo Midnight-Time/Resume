@@ -6,7 +6,7 @@ import { faBars, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
 /////
 import { useRef, useState } from "react";
 import { Link } from "react-scroll";
-import useScrollLock from "../../../hooks/useScrollLock";
+
 /////
 import { useGSAP } from "@gsap/react";
 import { navAnim } from "../../../animations";
@@ -14,11 +14,10 @@ import { navAnim } from "../../../animations";
 const Navigation = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
-  const { lockScroll, unlockScroll } = useScrollLock();
+
   // Если нажать на лого из любого места страницы, когда не открыта навигации, то перемещение будет сразу
   // Если навигация активна то перемещение будет с такой же как и у всех ссылок задержкой
   const [logoScrollDelay, setLogoScrollDelay] = useState<number>(0);
-  const [navPadding, setNavPadding] = useState<number>(0);
   const [navIsOpen, setNavIsOpen] = useState<boolean>(false);
 
   const container = useRef<HTMLDivElement>(null);
@@ -30,27 +29,13 @@ const Navigation = () => {
   );
 
   const menuOpenHandler = () => {
-    // Не использовала утилиту scrollbarCompensationFn, потому что тут по другому элемент реагирует на изменение ширины экрана
-    let isOpera = navigator.userAgentData?.brands[0].brand === "Opera";
-    let scrollBarCompensation;
-    if (isOpera) {
-      scrollBarCompensation =
-        window.innerWidth - document.body.offsetWidth + 0.5;
-    } else {
-      scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
-    }
-
     backgroundRef.current?.classList.toggle(`${classes.active}`);
     navRef.current?.classList.toggle(`${classes.active}`);
     if (navRef.current?.classList.contains(`${classes.active}`)) {
-      lockScroll();
       setLogoScrollDelay(200);
-      setNavPadding(scrollBarCompensation);
       setNavIsOpen(true);
     } else {
-      unlockScroll();
       setLogoScrollDelay(200);
-      setNavPadding(0);
       setNavIsOpen(false);
     }
   };
@@ -58,9 +43,8 @@ const Navigation = () => {
   const menuCloseHandler = () => {
     backgroundRef.current?.classList.remove(`${classes.active}`);
     navRef.current?.classList.remove(`${classes.active}`);
-    unlockScroll();
+
     setLogoScrollDelay(0);
-    setNavPadding(0);
     setNavIsOpen(false);
   };
 
@@ -82,7 +66,6 @@ const Navigation = () => {
           <button
             className={`btn_nav ${classes.btn}`}
             onClick={menuOpenHandler}
-            style={{ paddingRight: navPadding }}
           >
             {navIsOpen ? (
               <FontAwesomeIcon

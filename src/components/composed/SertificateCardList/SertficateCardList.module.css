@@ -1,10 +1,14 @@
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 .card {
   color: var(--color-text-dark);
   display: flex;
   gap: 12vw;
   padding: 0.5rem 4rem 0.3rem;
   text-transform: uppercase;
-  width: 100%;
   border-radius: var(--border-radius-sm);
 }
 .card:hover {

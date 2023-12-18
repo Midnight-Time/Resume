@@ -1,7 +1,12 @@
 .footer {
   color: var(--color-text-light);
-  background-color: #0000006c;
   padding: 20rem 5rem 0;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15vw;
 }
 
 .quote {
@@ -10,7 +15,7 @@
   gap: 2rem;
   padding: 5rem;
   max-width: 80rem;
-  margin: 0 auto 20rem;
+  /* margin: 0 auto 20rem; */
   border-radius: var(--border-radius-large);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(3px);

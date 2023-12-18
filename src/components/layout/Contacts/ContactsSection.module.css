@@ -6,11 +6,11 @@
     #ffc1e3 20%,
     #fff
   );
-  padding: 15rem 10rem 0rem;
+  padding: 15rem 10rem 10rem;
   position: relative;
   z-index: 20;
   overflow: visible;
-  height: 98vh;
+  height: max(98vh, fit-content);
 }
 .heading {
   text-align: center;
@@ -46,7 +46,7 @@
 /* MEDIA */
 @media only screen and (max-width: 31.25em) {
   .container {
-    padding: 10rem 3rem 5rem;
+    padding: 20rem 3rem 10rem;
   }
   .icon {
     width: 3rem;

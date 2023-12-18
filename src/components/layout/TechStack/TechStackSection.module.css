@@ -11,7 +11,7 @@
   padding-top: 5rem;
   padding-bottom: 10rem;
   overflow: hidden;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .heading {
   color: var(--color-accent-blue);
